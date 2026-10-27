@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎵 SONG DRIVER: Ritmo de música🎵 - Seu catálogo musical, no seu ritmo.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🎵 SONG DRIVER: Ritmo de música🎵</h1>
+    <p>Seu catálogo musical, no seu ritmo.</p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2 id="form-title">Adicionar música</h2>
+
+      <form id="music-form">
+        <input id="title" placeholder="Nome da música" required>
+        <input id="artist" placeholder="Nome do artista" required>
+
+        <textarea id="comment" placeholder="Comentário sobre a música"></textarea>
+
+        <label for="rating">Nota de 0 a 10</label>
+        <input id="rating" type="number" min="0" max="10" value="10" required>
+
+        <textarea id="lyrics" placeholder="Letra da música (opcional)"></textarea>
+
+        <button type="submit" id="save-button">Adicionar música</button>
+        <button type="button" id="cancel-edit" class="secondary" hidden>
+          Cancelar edição
+        </button>
+      </form>
+
+      <p id="music-message" class="message" aria-live="polite"></p>
+    </section>
+
+    <section class="panel">
+      <h2>Pesquisar letras</h2>
+
+      <form id="lyrics-form">
+        <input id="lyrics-artist" placeholder="Nome do artista" required>
+        <input id="lyrics-title" placeholder="Nome da música" required>
+        <button type="submit">Buscar letra</button>
+      </form>
+
+      <p id="lyrics-message" class="message" aria-live="polite"></p>
+      <pre id="lyrics-result"></pre>
+
+      <button type="button" id="save-lyrics" hidden>
+        Usar letra no cadastro
+      </button>
+    </section>
+
+    <section>
+      <h2>Catálogo compartilhado</h2>
+      <input id="filter" placeholder="Pesquisar no catálogo...">
+      <div id="music-list"></div>
+    </section>
+  </main>
+
+  <footer>🎵 SONG DRIVER: Ritmo de música🎵 • Seu catálogo musical, no seu ritmo.</footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
